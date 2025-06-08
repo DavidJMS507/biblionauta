@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "bibliosfera",
+      "name": "biblionauta",
       "dependencies": {
         "@react-navigation/bottom-tabs": "^7.3.14",
         "@react-navigation/drawer": "^7.4.1",
