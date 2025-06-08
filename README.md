@@ -48,7 +48,7 @@ bun start
 
 ```
 biblionauta/
-├── app/                 # Directorio principal de la aplicación (Expo Router)
+├── app/                # Directorio principal de la aplicación (Expo Router)
 ├── assets/             # Recursos estáticos (imágenes, fuentes, etc.)
 ├── src/                # Código fuente adicional
 ├── .expo/              # Configuración de Expo
@@ -93,11 +93,92 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## 🤝 Contribución
 
-1. Fork el proyecto
-2. Crea tu rama de características (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+### Flujo de Trabajo
+
+1. Asegúrate de tener la última versión del repositorio:
+```bash
+git fetch origin
+git checkout develop
+git pull origin develop
+```
+
+2. Crea una nueva rama desde `develop` siguiendo la convención de nombres:
+```bash
+git checkout -b tipo/nombre-descripcion
+```
+Donde `tipo` puede ser:
+- `feature/` - Para nuevas características
+- `fix/` - Para correcciones de errores
+- `refactor/` - Para refactorizaciones
+- `docs/` - Para cambios en documentación
+- `test/` - Para pruebas
+- `chore/` - Para tareas de mantenimiento
+
+3. Desarrolla tus cambios siguiendo las buenas prácticas:
+   - Escribe código limpio y legible
+   - Sigue los estándares de código del proyecto
+   - Añade comentarios cuando sea necesario
+   - Escribe pruebas para nuevas funcionalidades
+   - Actualiza la documentación si es necesario
+
+4. Realiza commits siguiendo el formato de Conventional Commits:
+```bash
+git commit -m "tipo(alcance): descripción breve"
+```
+Ejemplos:
+- `feat(auth): add login with Google`
+- `fix(books): resolve pagination issue`
+- `docs(readme): update installation steps`
+
+5. Mantén tu rama actualizada con `develop`:
+```bash
+git fetch origin
+git rebase origin/develop
+```
+
+6. Resuelve conflictos si existen durante el rebase
+
+7. Push de tus cambios:
+```bash
+git push origin tipo/nombre-descripcion
+```
+
+8. Crea un Pull Request (PR) hacia la rama `develop`:
+   - Usa la plantilla de PR proporcionada
+   - Describe claramente los cambios realizados
+   - Menciona los issues relacionados (si existen)
+   - Solicita revisión de al menos un mantenedor
+
+### Buenas Prácticas
+
+- **Commits**: 
+  - Haz commits pequeños y frecuentes
+  - Cada commit debe representar un cambio lógico y completo
+  - Usa mensajes de commit descriptivos
+
+- **Código**:
+  - Sigue los principios SOLID
+  - Mantén la cobertura de pruebas
+  - Documenta funciones y componentes complejos
+  - Usa TypeScript de manera efectiva
+
+- **Pull Requests**:
+  - Mantén los PRs pequeños y enfocados
+  - Responde a los comentarios de revisión
+  - Actualiza tu PR según el feedback
+  - Asegúrate de que todos los tests pasen
+
+- **Revisión de Código**:
+  - Revisa el código de otros contribuidores
+  - Proporciona feedback constructivo
+  - Verifica que los cambios cumplan con los estándares
+
+### Proceso de Revisión
+
+1. Los PRs serán revisados por al menos un mantenedor
+2. Se espera que los contribuidores respondan a los comentarios en un plazo razonable
+3. Los cambios deben pasar todas las pruebas automatizadas
+4. Se requiere aprobación explícita antes de hacer merge
 
 ## 📞 Soporte
 
