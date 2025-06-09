@@ -48,8 +48,8 @@ git clone https://github.com/David-Josue-Murillo/biblionauta.git
 
 2. **Configurar tu identidad (si es la primera vez):**
 ```bash
-git config user.name "Tu Nombre"
-git config user.email "tu-email@ejemplo.com"
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu_email@example.com"
 ```
 
 3. **Obtener la última versión:**
