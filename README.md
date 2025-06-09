@@ -41,14 +41,9 @@ bun start
 
 ### Conectarse al Repositorio
 
-1. **Verificar la conexión remota:**
+1. **Clonar el repositorio remoto:**
 ```bash
-git remote -v
-```
-Deberías ver:
-```
-origin  https://github.com/David-Josue-Murillo/biblionauta.git (fetch)
-origin  https://github.com/David-Josue-Murillo/biblionauta.git (push)
+git clone https://github.com/David-Josue-Murillo/biblionauta.git
 ```
 
 2. **Configurar tu identidad (si es la primera vez):**
@@ -118,33 +113,6 @@ git commit -m "feat(componente): agregando nueva funcionalidad"
 git push origin feature/nombre-de-tu-feature
 ```
 
-4. **Crear PR en GitHub:**
-   - Ve a [https://github.com/David-Josue-Murillo/biblionauta](https://github.com/David-Josue-Murillo/biblionauta)
-   - Haz clic en "Compare & pull request" o "New pull request"
-   - Usa el título: `feat(alcance): descripción breve`
-   - Completa la descripción del PR
-
-**Plantilla para descripción del PR:**
-```markdown
-## Descripción
-Breve descripción de los cambios realizados.
-
-## Cambios realizados
-- [ ] Cambio 1
-- [ ] Cambio 2
-- [ ] Cambio 3
-
-## Tipo de cambio
-- [ ] Nueva característica (feature)
-- [ ] Corrección de bug (fix)
-- [ ] Refactorización (refactor)
-- [ ] Documentación (docs)
-
-## Pruebas
-- [ ] Pruebas unitarias agregadas
-- [ ] Pruebas de integración realizadas
-- [ ] Aplicación probada en iOS y Android
-```
 
 ### Comandos Útiles
 
@@ -310,7 +278,3 @@ git push origin tipo/nombre-descripcion
 2. Se espera que los contribuidores respondan a los comentarios en un plazo razonable
 3. Los cambios deben pasar todas las pruebas automatizadas
 4. Se requiere aprobación explícita antes de hacer merge
-
-## 📞 Soporte
-
-Para reportar problemas o solicitar nuevas características, por favor abre un issue en el repositorio. 
