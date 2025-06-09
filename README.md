@@ -23,7 +23,7 @@ Biblionauta es una aplicación móvil desarrollada con React Native y Expo, dise
 
 1. Clonar el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/biblionauta.git
+git clone https://github.com/David-Josue-Murillo/biblionauta.git
 cd biblionauta
 ```
 
@@ -35,6 +35,137 @@ bun install
 3. Iniciar el proyecto:
 ```bash
 bun start
+```
+
+## 🔗 Trabajando con el Repositorio Remoto
+
+### Conectarse al Repositorio
+
+1. **Verificar la conexión remota:**
+```bash
+git remote -v
+```
+Deberías ver:
+```
+origin  https://github.com/David-Josue-Murillo/biblionauta.git (fetch)
+origin  https://github.com/David-Josue-Murillo/biblionauta.git (push)
+```
+
+2. **Configurar tu identidad (si es la primera vez):**
+```bash
+git config user.name "Tu Nombre"
+git config user.email "tu-email@ejemplo.com"
+```
+
+3. **Obtener la última versión:**
+```bash
+git fetch origin
+git checkout main
+git pull origin main
+```
+
+### Hacer Commits
+
+1. **Verificar el estado del repositorio:**
+```bash
+git status
+```
+
+2. **Agregar archivos al staging:**
+```bash
+# Archivos específicos
+git add nombre-del-archivo.tsx
+
+# Todos los cambios
+git add .
+```
+
+3. **Hacer commit siguiendo Conventional Commits:**
+```bash
+git commit -m "tipo(alcance): descripción breve"
+```
+
+**Ejemplos de commits:**
+- `feat(auth): agregando login con google`
+- `fix(books): resolviendo problema de paginación`
+- `docs(readme): actualizando pasos de instalación`
+- `refactor(components): optimizando renderizado de lista`
+- `test(utils): agregando pruebas para funciones de validación`
+
+4. **Subir cambios:**
+```bash
+git push origin main
+```
+
+### Crear Pull Requests
+
+1. **Crear rama para tu trabajo:**
+```bash
+git checkout main
+git pull origin main
+git checkout -b feature/nombre-de-tu-feature
+```
+
+2. **Hacer cambios y commits:**
+```bash
+# Hacer cambios en archivos
+git add .
+git commit -m "feat(componente): agregando nueva funcionalidad"
+```
+
+3. **Subir rama al repositorio:**
+```bash
+git push origin feature/nombre-de-tu-feature
+```
+
+4. **Crear PR en GitHub:**
+   - Ve a [https://github.com/David-Josue-Murillo/biblionauta](https://github.com/David-Josue-Murillo/biblionauta)
+   - Haz clic en "Compare & pull request" o "New pull request"
+   - Usa el título: `feat(alcance): descripción breve`
+   - Completa la descripción del PR
+
+**Plantilla para descripción del PR:**
+```markdown
+## Descripción
+Breve descripción de los cambios realizados.
+
+## Cambios realizados
+- [ ] Cambio 1
+- [ ] Cambio 2
+- [ ] Cambio 3
+
+## Tipo de cambio
+- [ ] Nueva característica (feature)
+- [ ] Corrección de bug (fix)
+- [ ] Refactorización (refactor)
+- [ ] Documentación (docs)
+
+## Pruebas
+- [ ] Pruebas unitarias agregadas
+- [ ] Pruebas de integración realizadas
+- [ ] Aplicación probada en iOS y Android
+```
+
+### Comandos Útiles
+
+```bash
+# Ver historial de commits
+git log --oneline
+
+# Ver diferencias antes de commit
+git diff
+
+# Descartar cambios en un archivo
+git checkout -- nombre-del-archivo
+
+# Cambiar de rama
+git checkout nombre-de-rama
+
+# Ver todas las ramas
+git branch -a
+
+# Eliminar rama local después del merge
+git branch -d nombre-de-rama
 ```
 
 ## 📱 Scripts Disponibles
@@ -98,11 +229,11 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 1. Asegúrate de tener la última versión del repositorio:
 ```bash
 git fetch origin
-git checkout develop
-git pull origin develop
+git checkout main
+git pull origin main
 ```
 
-2. Crea una nueva rama desde `develop` siguiendo la convención de nombres:
+2. Crea una nueva rama siguiendo la convención de nombres:
 ```bash
 git checkout -b tipo/nombre-descripcion
 ```
@@ -126,14 +257,14 @@ Donde `tipo` puede ser:
 git commit -m "tipo(alcance): descripción breve"
 ```
 Ejemplos:
-- `feat(auth): add login with Google`
-- `fix(books): resolve pagination issue`
-- `docs(readme): update installation steps`
+- `feat(auth): agregando login con google`
+- `fix(books): resolviendo problema de paginación`
+- `docs(readme): actualizando pasos de instalación`
 
-5. Mantén tu rama actualizada con `develop`:
+5. Mantén tu rama actualizada:
 ```bash
 git fetch origin
-git rebase origin/develop
+git rebase origin/main
 ```
 
 6. Resuelve conflictos si existen durante el rebase
@@ -143,7 +274,7 @@ git rebase origin/develop
 git push origin tipo/nombre-descripcion
 ```
 
-8. Crea un Pull Request (PR) hacia la rama `develop`:
+8. Crea un Pull Request hacia la rama `main`:
    - Usa la plantilla de PR proporcionada
    - Describe claramente los cambios realizados
    - Menciona los issues relacionados (si existen)
