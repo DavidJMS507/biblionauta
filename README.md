@@ -4,20 +4,18 @@ Biblionauta es una aplicación móvil desarrollada con React Native y Expo, dise
 
 ## 🚀 Tecnologías Principales
 
-- **React Native** (v0.79.3)
-- **Expo** (v53.0.10)
+- **React Native** (v0.79.2)
+- **Expo** (v53.0.6)
 - **TypeScript**
 - **Expo Router** (v5.0.7)
 - **NativeWind** (v4.1.23) / **TailwindCSS** (v3.4.17)
-- **React Navigation** (v7.x)
 
 ## 📋 Prerrequisitos
 
 - Node.js (versión LTS recomendada)
 - Bun (gestor de paquetes)
 - Expo CLI
-- iOS Simulator (para desarrollo en iOS)
-- Android Studio (para desarrollo en Android)
+- Android Studio
 
 ## 🛠️ Instalación
 
@@ -41,15 +39,20 @@ bun start
 
 ### Conectarse al Repositorio
 
-1. **Clonar el repositorio remoto:**
+1. **Verificar la conexión remota:**
 ```bash
-git clone https://github.com/David-Josue-Murillo/biblionauta.git
+git remote -v
+```
+Deberías ver:
+```
+origin  https://github.com/David-Josue-Murillo/biblionauta.git (fetch)
+origin  https://github.com/David-Josue-Murillo/biblionauta.git (push)
 ```
 
 2. **Configurar tu identidad (si es la primera vez):**
 ```bash
-git config --global user.name "Tu Nombre"
-git config --global user.email "tu_email@example.com"
+git config user.name "Tu Nombre"
+git config user.email "tu-email@ejemplo.com"
 ```
 
 3. **Obtener la última versión:**
@@ -113,6 +116,28 @@ git commit -m "feat(componente): agregando nueva funcionalidad"
 git push origin feature/nombre-de-tu-feature
 ```
 
+4. **Crear PR en GitHub:**
+   - Ve a [https://github.com/David-Josue-Murillo/biblionauta](https://github.com/David-Josue-Murillo/biblionauta)
+   - Haz clic en "Compare & pull request" o "New pull request"
+   - Usa el título: `feat(alcance): descripción breve`
+   - Completa la descripción del PR
+
+**Plantilla para descripción del PR:**
+```markdown
+## Descripción
+Breve descripción de los cambios realizados.
+
+## Cambios realizados
+- [ ] Cambio 1
+- [ ] Cambio 2
+- [ ] Cambio 3
+
+## Tipo de cambio
+- [ ] Nueva característica (feature)
+- [ ] Corrección de bug (fix)
+- [ ] Refactorización (refactor)
+- [ ] Documentación (docs)
+```
 
 ### Comandos Útiles
 
@@ -161,26 +186,6 @@ El proyecto utiliza NativeWind (TailwindCSS para React Native) para el estilizad
 - `tailwind.config.js`
 - `global.css`
 
-## 📦 Dependencias Principales
-
-### Navegación
-- @react-navigation/native
-- @react-navigation/bottom-tabs
-- @react-navigation/drawer
-- @react-navigation/native-stack
-- expo-router
-
-### UI/UX
-- react-native-safe-area-context
-- react-native-screens
-- react-native-vector-icons
-- react-native-svg
-
-### Utilidades
-- expo-constants
-- expo-linking
-- expo-status-bar
-- react-native-reanimated
 
 ## 🔧 Configuración de Desarrollo
 
@@ -256,25 +261,15 @@ git push origin tipo/nombre-descripcion
   - Usa mensajes de commit descriptivos
 
 - **Código**:
-  - Sigue los principios SOLID
-  - Mantén la cobertura de pruebas
   - Documenta funciones y componentes complejos
-  - Usa TypeScript de manera efectiva
+  - Usa TypeScript
 
 - **Pull Requests**:
   - Mantén los PRs pequeños y enfocados
   - Responde a los comentarios de revisión
   - Actualiza tu PR según el feedback
-  - Asegúrate de que todos los tests pasen
 
 - **Revisión de Código**:
   - Revisa el código de otros contribuidores
   - Proporciona feedback constructivo
   - Verifica que los cambios cumplan con los estándares
-
-### Proceso de Revisión
-
-1. Los PRs serán revisados por al menos un mantenedor
-2. Se espera que los contribuidores respondan a los comentarios en un plazo razonable
-3. Los cambios deben pasar todas las pruebas automatizadas
-4. Se requiere aprobación explícita antes de hacer merge
