@@ -1,14 +1,17 @@
 import { Tabs } from "expo-router";
 import { HomeIcon, TopBooksIcon , SearchIcon, BookmarkIcon, UserIcon } from "../../src/components/Icons";
+import { colors } from "../../src/constants/theme";
 
 export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        headerShown: false
+        headerShown: false,
+        tabBarStyle: {backgroundColor: colors.background},
+        tabBarActiveTintColor: colors.primary
       }}
     >
-      <Tabs.Screen 
+      <Tabs.Screen  
         name="index"
         options={{
           title: "Inicio", 
