@@ -5,18 +5,18 @@ export const HomeIcon = (props) => (
   <Ionicons name="library-outline" size={32} color="white" {...props} />
 );
 
-export const UserIcon = (props) => {
+export const UserIcon = (props) => (
   <Ionicons name="person-outline" size={32} color="white" {...props} />
-}
+)
 
-export const BookmarkIcon = (props) => {
+export const BookmarkIcon = (props) => (
   <Ionicons name="bookmark-outline" size={32} color="white" {...props} />
-}
+)
 
-export const TopBooksIcon = (props) => {
+export const TopBooksIcon = (props) => (
   <Ionicons name="rocket-outline" size={32} color="white" {...props} />
-}
+)
 
-export const SearchIcon = (props) => {
+export const SearchIcon = (props) => (
   <Ionicons name="search-outline" size={32} color="white" {...props} />
-}
+)
